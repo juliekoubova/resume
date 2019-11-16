@@ -1,0 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+  @apply vr-loose-3xl;
+  @apply mt-6;
+}
+
+h2 {
+  @apply vr-loose-2xl;
+  @apply mt-4;
+}
+
+h3, h4, h5, h6, p, li {
+  @apply vr-loose-base;
+}
+
+.-translate-x-1\/2 {
+  transform: translateX(-50%);
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.border-current {
+  border-color: currentColor;
+}
