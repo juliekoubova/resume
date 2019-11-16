@@ -1055,7 +1055,7 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/types@*", "@nuxt/types@0.3.4":
+"@nuxt/types@*", "@nuxt/types@0.3.4", "@nuxt/types@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.3.4.tgz#b3c164684c611a92631bd22e096b333f07a16833"
   integrity sha512-BhJEsS0QBXbLZpF7y/zrUbvHflUXlFIWACdL5eraReyLlzP5jKMBxv5eCe9JUGx9jgI0nyKeKRlOcE0poRL/3w==
@@ -1449,6 +1449,11 @@
     "@types/memory-fs" "*"
     "@types/webpack" "*"
     loglevel "^1.6.2"
+
+"@types/webpack-env@^1.14.1":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@types/webpack-env/-/webpack-env-1.14.1.tgz#0d8a53f308f017c53a5ddc3d07f4d6fa76b790d7"
+  integrity sha512-0Ki9jAAhKDSuLDXOIMADg54Hu60SuBTEsWaJGGy5cV+SSUQ63J2a+RrYYGrErzz39fXzTibhKrAQJAb8M7PNcA==
 
 "@types/webpack-hot-middleware@^2.16.5":
   version "2.16.5"

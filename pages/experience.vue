@@ -1,19 +1,24 @@
 <template>
   <div class="flex min-h-screen">
     <div class="flex-grow py-24">
-      <div class="max-w-xl mx-auto">
+      <div class="max-w-2xl mx-auto">
         <h1 class="sr-only">Professional Experience</h1>
         <timeline-item
-          v-for="(item, index) of experience"
-          :key="item.title"
+          v-for="(item, index) of items"
+          :key="item.key"
           :first="index === 0"
-          v-bind="item"
+          :from="item.from"
+          :to="item.to"
         >
-          <h4 class="font-bold">{{ item.title }}</h4>
-          <h5 class="font-medium text-gray-600 vr-normal-sm">{{ item.vendor }}</h5>
-          <p
-            class="vr-relaxed-sm break-words text-gray-800"
-          >{{ item.description }}</p>
+          <h4 class="vr-loose-base font-bold">{{ item.name }}</h4>
+          <div
+            v-if="item.vendor"
+            class="font-medium text-gray-600 vr-relaxed-sm"
+          >{{ item.vendor }}</div>
+          <div
+            class="markdown-relaxed-sm break-words text-gray-800"
+            v-html="item.html"
+          />
         </timeline-item>
       </div>
     </div>
@@ -33,12 +38,46 @@
 import Vue from 'vue'
 import TimelineItem from '@/components/TimelineItem.vue'
 
+const resolve = require.context('~/content/experience', false, /\.md$/)
+
+interface ExperienceItem {
+  from?: Date
+  html: string
+  key: string
+  name: string
+  vendor?: string
+  to?: Date
+}
 export default Vue.extend({
   components: { TimelineItem },
-  computed: {
-    experience() {
-      return this.$accessor.experience.items
+  asyncData() {
+    const items: ExperienceItem[] = []
+
+    for (const key of resolve.keys()) {
+      const data = resolve(key)
+      const { attributes } = data
+
+      items.push({
+        name: key,
+        ...attributes,
+        from: attributes.from && new Date(attributes.from),
+        to: attributes.to && new Date(attributes.to),
+        key,
+        html: data.html
+      })
     }
+    const FUTURE = new Date('2100-01-01')
+
+    items.sort((a, b) => {
+      const aTo = a.to || FUTURE
+      const bTo = b.to || FUTURE
+
+      return (aTo === bTo)
+        ? Number(b.from || 0) - Number(a.from || 0)
+        : Number(bTo) - Number(aTo)
+    })
+
+    return Promise.resolve({ items })
   }
 })
 </script>

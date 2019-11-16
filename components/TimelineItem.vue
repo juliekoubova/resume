@@ -3,7 +3,7 @@
     <div class="w-24 mt-2 flex-none vr-normal-sm text-gray-700 text-right">
       <time-value v-if="from" :value="from" />
       <span v-if="from">&mdash;</span>
-      <time-value :value="to" />
+      <time-value v-if="to" :value="to" />
     </div>
     <timeline-bullet-point
       class="w-10 mx-4 flex-none text-pink-500"
@@ -30,7 +30,7 @@ export default Vue.extend({
     first: { type: Boolean, default: false },
     from: { type: Date, default: undefined },
     last: { type: Boolean, default: false },
-    to: { type: Date, required: true }
+    to: { type: Date, default: undefined }
   }
 })
 </script>

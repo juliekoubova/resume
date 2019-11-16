@@ -24,6 +24,7 @@
     "noEmit": true,
     "types": [
       "@types/node",
+      "@types/webpack-env",
       "@nuxt/types"
     ]
   },

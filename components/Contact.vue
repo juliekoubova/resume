@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="text-xl bold my-5">Contact</h3>
+    <h3 class="vr-loose-lg font-bold">Contact</h3>
     <ul>
       <li v-for="c in contacts" :key="c.href">
         <circled-icon :icon="c.icon" :transform="c.iconTransform" class="text-pink-700" />

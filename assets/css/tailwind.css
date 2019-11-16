@@ -2,20 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-h1 {
-  @apply vr-loose-3xl;
-  @apply mt-6;
-}
-
-h2 {
-  @apply vr-loose-2xl;
-  @apply mt-4;
-}
-
-h3, h4, h5, h6, p, li {
-  @apply vr-loose-base;
-}
-
 .-translate-x-1\/2 {
   transform: translateX(-50%);
 }
@@ -26,4 +12,14 @@ h3, h4, h5, h6, p, li {
 
 .border-current {
   border-color: currentColor;
+}
+
+.markdown-relaxed-sm ul {
+  @apply list-disc;
+  @apply ml-6;
+  @apply mt-2;
+}
+.markdown-relaxed-sm li,
+.markdown-relaxed-sm p {
+  @apply vr-relaxed-sm;
 }

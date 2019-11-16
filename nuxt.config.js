@@ -1,8 +1,11 @@
+// @ts-check
+
+const { resolve } = require('path')
+
+/** @type {import('@nuxt/types').Configuration} */
 export default {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -14,10 +17,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  // extensions: ['ts'],
-  /*
-  ** Customize the progress-bar color
-  */
+
   loading: { color: '#fff' },
   buildModules: [
     '@nuxt/typescript-build',
@@ -30,7 +30,21 @@ export default {
     'nuxt-webfontloader'
   ],
   build: {
-    // additionalExtensions: ['ts'],
+    /** @param {import('webpack').Configuration} config */
+    extend(config) {
+      if (!config.module) {
+        config.module = { rules: [] }
+      }
+
+      config.module.rules.push({
+        test: /\.md$/,
+        include: resolve(__dirname, 'content'),
+        loader: 'frontmatter-markdown-loader',
+        options: {
+          mode: 'vue-render-functions'
+        }
+      })
+    },
     transpile: [/nuxt-typed-vuex/]
   },
   fontawesome: {
