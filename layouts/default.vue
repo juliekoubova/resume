@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans leading-loose">
+  <div class="font-sans leading-loose text-gray-800">
     <VerticalRhythmDebug v-if="isDev">
       <nuxt />
     </VerticalRhythmDebug>

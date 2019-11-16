@@ -6,7 +6,7 @@
       class="absolute top-0 left-0 right-0 h-full z-10 pointer-events-none"
     >
       <label
-        class="select-none absolute top-0 right-0 mx-2 pointer-events-auto"
+        class="select-none fixed top-0 right-0 mx-2 pointer-events-auto opacity-25 hover:opacity-100"
       >
         <input v-model="enabled" type="checkbox">
         Debug Vertical Rhythm

@@ -1,7 +1,24 @@
 ---
-name: CIMLES
+name: Live 3D Machining Visualization
 vendor: IPS s.r.o.
 from: 2018-10-01
+tech:
+  - WebGL
+  - three.js
+  - NGXS
+  - D3
+  - Angular
+  - TypeScript
+  - Node.js
+  - WebSockets
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus odio lorem, in porta elit finibus id. Phasellus tincidunt ipsum eu venenatis sagittis. Suspendisse in felis tincidunt, elementum elit ac, sollicitudin turpis. Donec sit amet turpis sapien. Donec nec odio turpis. Nunc faucibus, enim eget ornare lacinia, mi nisl porttitor nibh, ut tristique orci urna ac magna. Aliquam imperdiet, tortor a molestie vulputate, est lacus tincidunt lectus, eget iaculis eros leo sed magna. Maecenas cursus sem vitae viverra luctus.
+I inherited a messy proof of concept of an app that would play back a recording of a
+machining run. I turned it into a modern, maintainable, server-rendered Angular
+application based on the [NGXS](https://github.com/ngxs/store/) state management library.
+
+
+Later, I implemented playback of live data streamed over a web socket.
+I created a custom chart component using [D3.js](https://d3js.org/) that was
+performant enough to scroll smoothly at 60 FPS. I created a WebGL shader rendering
+thousands of arrows representing forces exerted by the tool at each point of its path.

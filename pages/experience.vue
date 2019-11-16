@@ -9,16 +9,25 @@
           :first="index === 0"
           :from="item.from"
           :to="item.to"
+          tabindex="0"
+          class="focus:outline-none"
         >
-          <h4 class="vr-loose-base font-bold">{{ item.name }}</h4>
+          <h3 class="vr-loose-base text-gray-700 font-bold">{{ item.name }}</h3>
           <div
             v-if="item.vendor"
             class="font-medium text-gray-600 vr-relaxed-sm"
           >{{ item.vendor }}</div>
           <div
-            class="markdown-relaxed-sm break-words text-gray-800"
+            class="markdown-relaxed-sm break-words text-gray-800 text-justify"
             v-html="item.html"
           />
+          <!-- <div class="mt-2">
+            <span
+              v-for="tag of item.tech"
+              :key="tag"
+              class="inline-block vr-tight-xs rounded-sm bg-pink-300 text-white px-1 mr-1"
+            >{{ tag }}</span>
+          </div>-->
         </timeline-item>
       </div>
     </div>
@@ -62,19 +71,16 @@ export default Vue.extend({
         ...attributes,
         from: attributes.from && new Date(attributes.from),
         to: attributes.to && new Date(attributes.to),
+        tech: attributes.tech || [],
         key,
         html: data.html
       })
     }
-    const FUTURE = new Date('2100-01-01')
 
     items.sort((a, b) => {
-      const aTo = a.to || FUTURE
-      const bTo = b.to || FUTURE
-
-      return (aTo === bTo)
-        ? Number(b.from || 0) - Number(a.from || 0)
-        : Number(bTo) - Number(aTo)
+      const an = Number(a.from || a.to || 0)
+      const bn = Number(b.from || b.to || 0)
+      return bn - an
     })
 
     return Promise.resolve({ items })
