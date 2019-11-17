@@ -10,6 +10,6 @@ tech:
   - WCF
   - InfoPath
 ---
-I created proof-of-concept solutions and technology demonstrations for prospective
-enterprise customers. I also participated on several production projects for
+Created proof-of-concept solutions and technology demonstrations for prospective
+enterprise customers. Participated on several production projects for
 government agencies.

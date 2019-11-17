@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative" aria-hidden="true">
     <div
       :class="{ 'mt-8': first }"
       class="border-l-4 -translate-x-1/2 border-current absolute top-0 bottom-0 left-1/2"

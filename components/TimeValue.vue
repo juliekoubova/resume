@@ -1,5 +1,5 @@
 <template>
-  <time :datetime="value">{{ formatted }}</time>
+  <time :datetime="year">{{ formatted }}</time>
 </template>
 
 <script lang="ts">
@@ -12,6 +12,9 @@ export default Vue.extend({
     formatted() {
       const format = new Intl.DateTimeFormat('en-US', { year: 'numeric' })
       return format.format(new Date(this.value))
+    },
+    year() {
+      return new Date(this.value).getUTCFullYear()
     }
   }
 })

@@ -6,5 +6,6 @@ vendor: Trask Solutions a.s.
 tech:
   - SharePoint
 ---
-I designed a code-first framework for SharePoint object provisioning, which was
+Maintained legacy applications.
+Designed a code-first framework for SharePoint object provisioning, which was
 then used to develop the next version of Škoda&rsquo;s CMS.

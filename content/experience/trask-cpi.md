@@ -7,4 +7,5 @@ tech:
   - SharePoint
 ---
 
-I designed an invoice approval workflow based on SharePoint 2010.
+Designed an invoice approval workflow based on SharePoint 2010. Communicated
+with stakeholders and business analysts.

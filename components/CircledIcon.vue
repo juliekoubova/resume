@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-layers v-if="icon" fixed-width>
+  <font-awesome-layers v-if="icon" fixed-width aria-hidden="true">
     <font-awesome-icon icon="circle" class="fill-current" />
     <font-awesome-icon :icon="icon" :transform="transform" size="xs" class="text-white" />
   </font-awesome-layers>

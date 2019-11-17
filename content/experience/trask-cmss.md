@@ -10,7 +10,7 @@ tech:
   - WCF
 ---
 
-I have identified and fixed code incompatible with SharePoint 2013,
-created new master pages and CSS according to the provided design, and developed
-PowerShell scripts to move data from the old farm to the new one via
+Identified and fixed code incompatible with SharePoint 2013.
+Created new master pages and CSS according to the provided design.
+Developed PowerShell scripts to move data from the old farm to the new one via
 an intermediate 2010 installation.

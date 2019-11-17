@@ -1,7 +1,7 @@
 <template>
   <section class="flex">
     <time-range
-      class="w-24 mt-4 flex-none vr-normal-xs text-gray-700 text-right"
+      class="w-20 mt-4 flex-none vr-normal-xs text-gray-700 text-right"
       :from="from"
       :to="to"
     />
