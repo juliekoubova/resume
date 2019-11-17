@@ -14,22 +14,41 @@
   border-color: currentColor;
 }
 
+.hyphen {
+  hyphens: auto;
+}
+
+::selection {
+  @apply text-white;
+  @apply bg-pink-600;
+}
+
+.interactive-link {
+  @apply underline;
+}
+
+.interactive-link:focus, .interactive-link:hover {
+  @apply text-pink-800;
+}
+
 .markdown-relaxed-sm ul {
   @apply list-disc;
   @apply ml-6;
   @apply mt-2;
 }
 
-.markdown-relaxed-sm li,
-.markdown-relaxed-sm p {
+.markdown-relaxed-sm li, .markdown-relaxed-sm p {
   @apply vr-relaxed-sm;
 }
 
 .markdown-relaxed-sm p {
   @apply pb-2;
+  @apply hyphen;
+  @apply text-justify;
 }
 
-a {
+.markdown-relaxed-sm a {
+  @apply interactive-link;
   @apply text-pink-600;
   @apply underline;
 }

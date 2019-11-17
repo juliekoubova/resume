@@ -1,7 +1,9 @@
 <template>
   <span>
     <font-awesome-icon :icon="['fab','github']" />
-    <a :href="href">{{ project }}</a>
+    <a :href="href" class="interactive-link" target="_blank">
+      <slot>{{ project }}</slot>
+    </a>
   </span>
 </template>
 

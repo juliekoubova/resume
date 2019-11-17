@@ -21,7 +21,7 @@ import { loadContacts } from '@/src/contact'
 
 export default Vue.extend({
   components: { CircledIcon },
-  asyncData() {
+  data() {
     return { contacts: loadContacts() }
   }
 })

@@ -6,15 +6,16 @@
 import Vue from 'vue'
 export default Vue.extend({
   props: {
+    format: { type: Object, default: () => ({ year: 'numeric' }) },
     value: { type: Date, required: true }
   },
   computed: {
     formatted() {
-      const format = new Intl.DateTimeFormat('en-US', { year: 'numeric' })
-      return format.format(new Date(this.value))
+      const dtf = new Intl.DateTimeFormat('en-US', this.format)
+      return dtf.format(new Date(this.value))
     },
     year() {
-      return new Date(this.value).getUTCFullYear()
+      return new Date(this.value).toISOString()
     }
   }
 })

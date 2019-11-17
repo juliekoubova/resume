@@ -7,6 +7,9 @@ export default {
   mode: 'universal',
 
   head: {
+    htmlAttrs: {
+      lang: 'en-US'
+    },
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
@@ -40,7 +43,9 @@ export default {
         include: resolve(__dirname, 'content'),
         loader: 'frontmatter-markdown-loader',
         options: {
-          mode: 'vue-render-functions'
+          markdownIt: {
+            typographer: true
+          }
         }
       })
     }

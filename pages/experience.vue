@@ -13,7 +13,7 @@
           <h3 class="vr-loose-base text-gray-700 font-bold">{{ item.name }}</h3>
           <div
             v-if="item.vendor"
-            class="font-medium text-gray-600 vr-relaxed-sm"
+            class="font-medium text-gray-600 vr-relaxed-sm tracking-wide"
           >{{ item.vendor }}</div>
           <div
             class="markdown-relaxed-sm break-words text-gray-800 mt-2"
@@ -23,6 +23,7 @@
             <github-link :project="item.github" />
           </div>
         </timeline-item>
+        <updated-footer class="vr-loose-xs mt-16 text-pink-200 tracking-wide" />
       </div>
     </div>
     <div
@@ -35,23 +36,20 @@
           <li v-for="item of section.items" :key="item">{{ item }}</li>
         </ul>
       </div>
-
-      <footer
-        class="vr-relaxed-xs mt-16 text-pink-200 uppercase tracking-wide"
-      >Updated November 2019</footer>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import UpdatedFooter from '@/components/UpdatedFooter.vue'
 import GithubLink from '@/components/GithubLink.vue'
 import TimelineItem from '@/components/TimelineItem.vue'
 import { loadExperience } from '@/src/experience'
 import { loadTech } from '@/src/tech'
 
 export default Vue.extend({
-  components: { GithubLink, TimelineItem },
+  components: { UpdatedFooter, GithubLink, TimelineItem },
   asyncData() {
     return {
       experience: loadExperience(),
