@@ -9,7 +9,7 @@
       class="w-10 mx-4 flex-none text-pink-500"
       :first="first"
     />
-    <div class="flex-auto pb-10">
+    <div class="flex-auto pb-4">
       <slot />
     </div>
   </section>

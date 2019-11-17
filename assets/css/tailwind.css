@@ -19,11 +19,17 @@
   @apply ml-6;
   @apply mt-2;
 }
+
 .markdown-relaxed-sm li,
 .markdown-relaxed-sm p {
   @apply vr-relaxed-sm;
 }
 
 .markdown-relaxed-sm p {
-  padding-bottom: 1rem;
+  @apply pb-2;
+}
+
+a {
+  @apply text-pink-600;
+  @apply underline;
 }

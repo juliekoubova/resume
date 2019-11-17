@@ -735,6 +735,13 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.25"
 
+"@fortawesome/free-brands-svg-icons@^5.11.2":
+  version "5.11.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.11.2.tgz#39d4296d03bf5719c579dea4bdcdd356ed2de0b4"
+  integrity sha512-wKK5znpHiZ2S0VgOvbeAnYuzkk3H86rxWajD9PVpfBj3s/kySEWTFKh/uLPyxiTOx8Tsd0OGN4En/s9XudVHLQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.25"
+
 "@fortawesome/free-solid-svg-icons@^5.11.2":
   version "5.11.2"
   resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.11.2.tgz#2f2f1459743a27902b76655a0d0bc5ec4d945631"
@@ -1055,7 +1062,7 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/types@*", "@nuxt/types@0.3.4", "@nuxt/types@^0.3.4":
+"@nuxt/types@0.3.4", "@nuxt/types@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@nuxt/types/-/types-0.3.4.tgz#b3c164684c611a92631bd22e096b333f07a16833"
   integrity sha512-BhJEsS0QBXbLZpF7y/zrUbvHflUXlFIWACdL5eraReyLlzP5jKMBxv5eCe9JUGx9jgI0nyKeKRlOcE0poRL/3w==
@@ -6852,15 +6859,6 @@ nuxt-purgecss@^0.2.1:
     glob-all "^3.1.0"
     purgecss "^1.1.0"
     purgecss-webpack-plugin "^1.4.0"
-
-nuxt-typed-vuex@^0.1.10:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/nuxt-typed-vuex/-/nuxt-typed-vuex-0.1.10.tgz#c197864cc302a5e856c8a3f2f391eac5e3c12569"
-  integrity sha512-BKobMNFhAL6JKZJiM2XMwLtOESZ2FlXwD9aQMTcVp9GTxSrQEF+d42D86MKEOpxFGwsCPkPyf2yjwc6a4LqhYw==
-  dependencies:
-    normalize-path "^3.0.0"
-  optionalDependencies:
-    "@nuxt/types" "*"
 
 nuxt-webfontloader@^1.1.0:
   version "1.1.0"

@@ -1,5 +1,5 @@
 ---
-from: 2004-11-01
+from: 2002-11-01
 to: 2009-09-01
 name: Presales Support, Consulting Services
 vendor: Microsoft s.r.o.
@@ -11,5 +11,7 @@ tech:
   - InfoPath
 ---
 Created proof-of-concept solutions and technology demonstrations for prospective
-enterprise customers. Participated on several production projects for
-government agencies.
+enterprise customers.
+
+Developed data transformation pipelines and user interface on several enterprise
+integration projects for government agencies.

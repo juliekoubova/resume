@@ -1,5 +1,5 @@
 ---
-name: Live 3D Machining Visualization
+name: Interactive 3D Machining Visualization
 vendor: IPS s.r.o.
 from: 2018-10-01
 tech:
@@ -13,7 +13,7 @@ tech:
   - WebSockets
 ---
 
-Inherited a messy proof of concept of an app that would play back a recording of a
+Inherited a messy prototype of an app that would play a recording of a
 machining run; turned it into a modern, maintainable, server-rendered Angular
 application based on the [NGXS](https://github.com/ngxs/store/) state management library.
 

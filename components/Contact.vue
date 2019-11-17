@@ -16,14 +16,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import CircledIcon from './CircledIcon.vue'
+import CircledIcon from '@/components/CircledIcon.vue'
+import { loadContacts } from '@/src/contact'
 
 export default Vue.extend({
   components: { CircledIcon },
-  computed: {
-    contacts() {
-      return this.$accessor.contact.items
-    }
+  asyncData() {
+    return { contacts: loadContacts() }
   }
 })
 </script>

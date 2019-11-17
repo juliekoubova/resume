@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Web Platform",
+    "items": [
+      "TypeScript",
+      "Angular",
+      "NGXS / NGRX / Redux",
+      "three.js",
+      "D3.js",
+      "React",
+      "PostCSS"
+    ]
+  },
+  {
+    "name": "Microsoft Azure",
+    "items": [
+      "App Services",
+      "Cosmos DB",
+      "Storage",
+      "Web Jobs",
+      "Event Hubs",
+      "Service Bus"
+    ]
+  },
+  {
+    "name": "Other",
+    "items": [
+      "Node.js",
+      ".NET / C# / F#",
+      "PowerShell",
+      "C/C++ / Win32 / COM"
+    ]
+  }
+]

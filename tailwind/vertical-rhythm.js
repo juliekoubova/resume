@@ -1,4 +1,6 @@
 // @ts-check
+// Based on code by Jess Telford <jess@cete.io>
+// https://github.com/ceteio/styled-components-rhythm
 
 /**
  * @param {number} value

@@ -22,8 +22,7 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss',
-    'nuxt-typed-vuex'
+    '@nuxtjs/tailwindcss'
   ],
   modules: [
     'nuxt-fontawesome',
@@ -44,14 +43,22 @@ export default {
           mode: 'vue-render-functions'
         }
       })
-    },
-    transpile: [/nuxt-typed-vuex/]
+    }
   },
   fontawesome: {
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
+        icons: [
+          'faCircle',
+          'faMobileAlt',
+          'faPaperPlane'
+        ]
+      }, {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: [
+          'faGithub'
+        ]
       }
     ]
   },

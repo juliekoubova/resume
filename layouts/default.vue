@@ -12,8 +12,9 @@ import Vue from 'vue'
 import VerticalRhythmDebug from '@/components/VerticalRhythmDebug.vue'
 export default Vue.extend({
   components: { VerticalRhythmDebug },
-  computed: {
-    isDev() { return this.$accessor.isDev }
+
+  data() {
+    return { isDev: process.env.NODE_ENV === 'development' }
   }
 })
 </script>

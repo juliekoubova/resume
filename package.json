@@ -13,14 +13,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@types/webpack-env": "^1.14.1",
     "nuxt": "^2.10.2",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-property-decorator": "^2.5.0",
-    "nuxt-typed-vuex": "^0.1.10",
-    "nuxt-webfontloader": "^1.1.0",
-    "vuex": "^3.1.1"
+    "nuxt-webfontloader": "^1.1.0"
   },
   "devDependencies": {
     "@nuxt/types": "^0.3.4",

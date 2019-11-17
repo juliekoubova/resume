@@ -10,7 +10,7 @@
         <p class="vr-loose-base mt-8 max-w-xl text-pink-200">
           I&rsquo;m a software developer based in Prague. My areas of
           expertise encompass a wide range of platforms and technologies: from
-          creating modern, responsive, and accessible web user experiences and cloud
+          creating performant, responsive, and accessible web apps; cloud
           back-end development, to low level C/C++ systems programming.
         </p>
       </div>
