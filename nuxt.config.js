@@ -67,6 +67,9 @@ export default {
       }
     ]
   },
+  router: {
+    base: '/resume'
+  },
   webfontloader: {
     google: {
       families: ['Quicksand:400,500,700&display=swap&subset=latin']
