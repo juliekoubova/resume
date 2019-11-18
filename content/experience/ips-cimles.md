@@ -13,7 +13,7 @@ tech:
   - WebSockets
 ---
 
-Inherited a messy prototype of an app that would play a recording of a
+Inherited a prototype of an app that would play a recording of a
 machining run; turned it into a modern, maintainable, server-rendered Angular
 application based on the [NGXS](https://github.com/ngxs/store/) state management library.
 
