@@ -1,7 +1,7 @@
 <template>
   <span>
-    <font-awesome-icon :icon="['fab','github']" />
-    <a :href="href" class="interactive-link" target="_blank">
+    <fa :icon="['fab','github']" />
+    <a :href="href" class="interactive-link" target="_blank" rel="noopener">
       <slot>{{ project }}</slot>
     </a>
   </span>
@@ -18,6 +18,5 @@ export default Vue.extend({
       return `https://github.com/${this.project}/`
     }
   }
-
 })
 </script>

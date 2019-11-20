@@ -8,6 +8,7 @@
     <timeline-bullet-point
       class="w-10 mx-4 flex-none text-pink-500"
       :first="first"
+      :pulsing="!to"
     />
     <div class="flex-auto pb-4">
       <slot />

@@ -1,7 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
 .-translate-x-1\/2 {
   transform: translateX(-50%);
 }
@@ -51,4 +50,22 @@
   @apply interactive-link;
   @apply text-pink-600;
   @apply underline;
+}
+
+@media screen {
+  .pulse {
+    box-shadow: 0 0 0 rgba(151, 38, 109, 0.25);
+    animation: pulse 4s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(151, 38, 109, 0.25);
+    }
+    70% {
+      box-shadow: 0 0 0 8px transparent;
+    }
+    100% {
+      box-shadow: 0 0 0 0 transparent;
+    }
+  }
 }

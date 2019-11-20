@@ -8,16 +8,19 @@
       />
     </div>
     <div>
-      Made with
+      <span>Made with</span>
       <a
         class="interactive-link"
         href="https://nuxtjs.org/"
         target="_blank"
-      >nuxt.js</a> and
+        rel="noopener"
+      >nuxt.js</a>
+      <span>and</span>
       <a
         class="interactive-link"
         href="https://tailwindcss.com/"
         target="_blank"
+        rel="noopener"
       >Tailwind CSS</a>.
       <github-link project="juliekoubova/resume">Wanna see how?</github-link>
     </div>

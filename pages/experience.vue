@@ -23,7 +23,7 @@
             <github-link :project="item.github" />
           </div>
         </timeline-item>
-        <updated-footer class="vr-loose-xs mt-16 text-pink-200 tracking-wide" />
+        <updated-footer class="vr-loose-xs mt-16 text-pink-400 tracking-wide" />
       </div>
     </div>
     <div
