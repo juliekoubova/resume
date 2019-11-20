@@ -51,6 +51,7 @@ export default {
     }
   },
   fontawesome: {
+    component: 'fa',
     imports: [
       {
         set: '@fortawesome/free-solid-svg-icons',
@@ -65,6 +66,11 @@ export default {
           'faGithub'
         ]
       }
+    ]
+  },
+  purgeCSS: {
+    paths: [
+      'node_modules/@fortawesome/fontawesome-svg-core/**/*.js'
     ]
   },
   router: {
