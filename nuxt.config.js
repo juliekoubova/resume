@@ -57,6 +57,7 @@ export default {
         set: '@fortawesome/free-solid-svg-icons',
         icons: [
           'faCircle',
+          'faMapMarkerAlt',
           'faMobileAlt',
           'faPaperPlane'
         ]
@@ -78,7 +79,9 @@ export default {
   },
   webfontloader: {
     google: {
-      families: ['Quicksand:400,500,700&display=swap&subset=latin']
+      families: [
+        'Quicksand:400,500,700&display=swap&subset=latin'
+      ]
     }
   }
 }

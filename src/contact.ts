@@ -5,6 +5,6 @@ export interface ContactItem {
   text: string
 }
 
-export function loadContacts(): ContactItem[] {
+export function loadContacts(): Record<string, ContactItem> {
   return require('~/content/contact.json')
 }

@@ -130,11 +130,15 @@ module.exports = function({ addUtilities, config, e, theme, variants }) {
   const utilities = {}
 
   for (const [fontFamily, capHeightFraction] of fontCapHeights) {
+    const fontFamilySelector = fontFamily === 'default'
+      ? ''
+      : e(fontFamily.replace(/\s+/, '-').toLowerCase())
+
     for (const [fontSize, fontSizeRem] of fontSizes) {
       for (const [lineHeight, lineHeightFraction] of lineHeights) {
         const parts = [
           '.vr',
-          fontFamily === 'default' ? '' : e(fontFamily),
+          fontFamilySelector,
           lineHeight,
           fontSize
         ]
@@ -146,7 +150,7 @@ module.exports = function({ addUtilities, config, e, theme, variants }) {
           capHeightFraction
         )
 
-        if (fontFamily !== 'default') {
+        if (fontFamilySelector) {
           utilities[className].fontFamily = fontFamily
         }
       }

@@ -1,18 +1,15 @@
 <template>
-  <div>
-    <h3 class="vr-loose-lg font-bold">Contact</h3>
-    <ul>
-      <li v-for="c in contacts" :key="c.href" class="vr-loose-base">
-        <fa
-          :icon="c.icon"
-          :transform="c.iconTransform"
-          fixed-width
-          class="text-pink-700"
-        />
-        <a :href="c.href">{{ c.text }}</a>
-      </li>
-    </ul>
-  </div>
+  <span>
+    <fa
+      v-if="contact && contact.icon"
+      :icon="contact.icon"
+      :transform="contact.iconTransform"
+      fixed-width
+      class="text-pink-700"
+    />
+    <a v-if="contact && contact.href" :href="contact.href">{{ contact.text }}</a>
+    <span v-else-if="contact">{{ contact.text }}</span>
+  </span>
 </template>
 
 <script lang="ts">
@@ -20,8 +17,13 @@ import Vue from 'vue'
 import { loadContacts } from '@/src/contact'
 
 export default Vue.extend({
+  props: {
+    type: { type: String, required: true }
+  },
   data() {
-    return { contacts: loadContacts() }
+    const contacts = loadContacts()
+    const contact = contacts[this.type]
+    return { contact }
   }
 })
 </script>

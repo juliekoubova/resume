@@ -15,7 +15,8 @@ module.exports = {
   verticalRhythm: {
     defaultLineHeight: 'loose',
     fontCapHeight: {
-      default: 0.705
+      default: 0.705,
+      'Open Sans': 0.72
     },
     height: 0.5
   },

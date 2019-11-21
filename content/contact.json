@@ -1,12 +1,16 @@
-[
-  {
+{
+  "phone": {
+    "href": "tel:+420724557212",
+    "icon": "mobile-alt",
+    "text": "+420 724 557 212"
+  },
+  "email": {
     "href": "mailto:julie@koubova.net",
     "icon": "paper-plane",
     "text": "julie@koubova.net"
   },
-  {
-    "href": "tel:+420724557212",
-    "icon": "mobile-alt",
-    "text": "+420 724 557 212"
+  "location": {
+    "icon": "map-marker-alt",
+    "text": "Prague, Czech Republic"
   }
-]
+}
