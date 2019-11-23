@@ -21,8 +21,8 @@
         href="https://tailwindcss.com/"
         target="_blank"
         rel="noopener"
-      >Tailwind CSS</a>.
-      <github-link project="juliekoubova/resume">Wanna see how?</github-link>
+      >tailwind.css</a>.
+      <github-link project="juliekoubova/resume">See on GitHub</github-link>
     </div>
   </footer>
 </template>

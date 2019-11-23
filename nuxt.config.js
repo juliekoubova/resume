@@ -57,6 +57,7 @@ export default {
         set: '@fortawesome/free-solid-svg-icons',
         icons: [
           'faCircle',
+          'faChevronDown',
           'faMapMarkerAlt',
           'faMobileAlt',
           'faPaperPlane'
@@ -68,6 +69,11 @@ export default {
         ]
       }
     ]
+  },
+  postcss: {
+    'postcss-cssnext': {
+      browsers: ['last 2 versions', 'ie >= 11']
+    }
   },
   purgeCSS: {
     paths: [

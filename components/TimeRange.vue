@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-end">
+  <div class="flex">
     <time-value v-if="from" :value="from" />
     <span v-if="from">&mdash;</span>
     <time-value v-if="to" :value="to" />

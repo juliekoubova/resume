@@ -22,9 +22,9 @@
   @apply bg-pink-600;
 }
 
-.interactive-link {
+/* .interactive-link {
   @apply underline;
-}
+} */
 
 .interactive-link:focus, .interactive-link:hover {
   @apply text-pink-800;
@@ -47,15 +47,29 @@
 }
 
 .markdown-relaxed-sm a {
-  @apply interactive-link;
+  /* @apply interactive-link; */
   @apply text-pink-600;
   @apply underline;
 }
 
 @media screen {
+  .bounce {
+    animation: bounce 3s ease-in 4s infinite;
+  }
   .pulse {
     box-shadow: 0 0 0 rgba(151, 38, 109, 0.25);
     animation: pulse 4s infinite;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-1.5rem);
+    }
+    60% {
+      transform: translateY(-.75rem);
+    }
   }
   @keyframes pulse {
     0% {

@@ -1,8 +1,10 @@
 <template>
   <span>
-    <fa :icon="['fab','github']" />
     <a :href="href" class="interactive-link" target="_blank" rel="noopener">
-      <slot>{{ project }}</slot>
+      <fa :icon="['fab','github']" />
+      <span class="underline">
+        <slot>{{ project }}</slot>
+      </span>
     </a>
   </span>
 </template>

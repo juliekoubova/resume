@@ -1,6 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
+  corePlugins: {
+    fontSize: false,
+    lineHeight: false
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -8,6 +12,10 @@ module.exports = {
           'Quicksand',
           ...defaultTheme.fontFamily.sans
         ]
+      },
+      screens: {
+        print: { raw: 'print' },
+        screen: { raw: 'screen' }
       }
     }
   },

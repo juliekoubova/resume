@@ -93,7 +93,12 @@ module.exports = function({ addUtilities, config, e, theme, variants }) {
    * @param {number} capHeightFraction
    */
   function setFontWithRhythm(fontSizeRem, desiredLineHeight, capHeightFraction) {
-    const lineHeightRem = rhythmLineHeight(rhythmHeight, capHeightFraction, fontSizeRem, desiredLineHeight)
+    const lineHeightRem = rhythmLineHeight(
+      rhythmHeight,
+      capHeightFraction,
+      fontSizeRem,
+      desiredLineHeight
+    )
     const shiftRem = rhythmShift(capHeightFraction, lineHeightRem, fontSizeRem)
 
     return {

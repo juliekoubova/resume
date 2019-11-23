@@ -4,7 +4,7 @@
     "items": [
       "TypeScript",
       "Angular",
-      "NGXS / NGRX / Redux",
+      "NGXS \u00B7 NGRX \u00B7 Redux",
       "three.js",
       "D3.js",
       "React",
@@ -26,9 +26,9 @@
     "name": "Other",
     "items": [
       "Node.js",
-      ".NET / C# / F#",
+      ".NET \u00B7 C# \u00B7 F#",
       "PowerShell",
-      "C/C++ / Win32 / COM"
+      "C/C++ \u00B7 Win32 \u00B7 COM"
     ]
   }
 ]
