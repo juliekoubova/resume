@@ -1,15 +1,12 @@
 <template>
   <adjust-vr class="text-pink-100">
-    <div class="h-screen bg-pink-800 flex flex-col px-2 md:px-10">
+    <div class="min-h-screen bg-pink-800 flex flex-col px-2-safe md:px-8-safe">
       <resume-cover-contacts />
       <div class="flex-auto flex flex-col justify-center">
-        <h2 class="vr-loose-2xl text-pink-200">Hi!</h2>
-        <h1 class="vr-loose-3xl font-bold tracking-wide">
-          <span>I&rsquo;m</span>
-          <span>Julie Koubová</span>
-        </h1>
+        <h2 class="vr-normal-xl md:vr-loose-2xl text-pink-200">Hi!</h2>
+        <h1 class="vr-normal-2xl md:vr-loose-3xl font-bold tracking-wide">I&rsquo;m Julie Koubová</h1>
 
-        <p ref="para" class="vr-loose-base mt-8 max-w-xl text-pink-200">
+        <p ref="para" class="vr-relaxed-sm md:vr-loose-base mt-8 max-w-xl text-pink-200">
           I&rsquo;m a software developer based in Prague. My areas of expertise
           encompass a wide range of platforms and technologies: from creating
           beautiful and accessible web apps, to cloud back-end development,
@@ -20,7 +17,7 @@
       <div class="mx-auto h-32">
         <transition name="fade">
           <scroll-link
-            v-if="scrollY < 5"
+            v-if="scrollY < 64"
             href="#experience"
             class="block bounce px-12 py-10"
           >
@@ -33,21 +30,24 @@
     </div>
 
     <transition name="slide-up">
-      <div
-        v-show="scrollY >= showFixedHeaderAt && scrollDelta < 0"
-        class="fixed top-0 left-0 right-0 flex justify-end bg-pink-800 pl-4 md:pl-10 pb-4 z-10 shadow-lg"
+      <header
+        v-show="scrollY >= showFixedHeaderAt"
+        class="fixed top-0 left-0 right-0 flex justify-end bg-pink-800 px-4-safe pb-4 z-10 shadow-lg"
       >
         <div class="flex-auto">
           <h1
-            class="vr-normal-lg md:vr-normal-3xl font-bold tracking-wide"
+            class="vr-normal-lg md:vr-normal-3xl tracking-wide"
           >Julie Koubová</h1>
         </div>
         <resume-cover-contacts />
-      </div>
+      </header>
     </transition>
 
-    <global-events @scroll.passive="handleScroll()" />
-    <global-events target="window" @resize.passive="handleResize()" />
+    <global-events
+      target="window"
+      @resize.passive="handleResize()"
+      @orientationchange.passive="handleResize()"
+    />
   </adjust-vr>
 </template>
 
@@ -61,7 +61,7 @@
   opacity: 0;
 }
 .fade-leave-to {
-  transform: translateY(-15rem) scale(16);
+  transform: translateY(-3rem) scale(0.8);
 }
 
 .slide-up-enter-active,
@@ -90,27 +90,40 @@ export default Vue.extend({
     ScrollLink
   },
   data: () => ({
+    rafId: undefined as number | undefined,
     scrollDelta: 0,
     scrollY: 0,
-    showFixedHeaderAt: 0
+    showFixedHeaderAt: undefined as number | undefined
   }),
 
-  mounted() {
+  created() {
     if (!this.$isServer) {
-      this.handleResize()
+      this.rafId = requestAnimationFrame(this.updateFrame)
+    }
+  },
+
+  beforeDestroy() {
+    if (this.rafId !== undefined) {
+      cancelAnimationFrame(this.rafId)
     }
   },
 
   methods: {
-    handleScroll() {
+    updateFrame() {
       this.scrollDelta = window.scrollY - this.scrollY
       this.scrollY = window.scrollY
+
+      if (this.showFixedHeaderAt === undefined) {
+        const para = this.$refs.para as Element
+        const rect = para.getBoundingClientRect()
+        this.showFixedHeaderAt = window.scrollY + rect.bottom
+      }
+
+      this.rafId = requestAnimationFrame(this.updateFrame)
     },
 
     handleResize() {
-      const para = this.$refs.para as Element
-      const rect = para.getBoundingClientRect()
-      this.showFixedHeaderAt = rect.bottom
+      this.showFixedHeaderAt = undefined
     }
   }
 })

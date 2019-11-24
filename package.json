@@ -22,6 +22,7 @@
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-property-decorator": "^2.5.0",
     "nuxt-webfontloader": "^1.1.0",
+    "tailwindcss-padding-safe": "^1.0.4",
     "vue-global-events": "^1.1.2"
   },
   "devDependencies": {

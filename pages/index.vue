@@ -1,7 +1,7 @@
 <template>
   <div>
     <resume-cover />
-    <div class="screen:max-w-5xl mx-auto px-2 md:px-6">
+    <div class="screen:max-w-5xl mx-auto px-2-safe md:px-6-safe">
       <div class="flex">
         <div class="md:ml-40 print:ml-40">
           <h2 class="sr-only">Professional Experience</h2>

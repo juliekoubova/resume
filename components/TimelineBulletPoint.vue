@@ -6,10 +6,10 @@
         'border-current-to-transparent': last,
         'mt-8': first
       }"
-      class="border-l-4 -translate-x-1/2 absolute top-0 bottom-0 left-1/2"
+      class="border-l-4 -translate-x-1/2 absolute top-0 bottom-0 left-1/2 select-none"
     />
     <div
-      class="relative w-3 h-3 bg-white border-current border-4 mx-auto mt-5 rounded-full"
+      class="relative w-3 h-3 bg-white border-current border-4 mx-auto mt-5 rounded-full select-none"
       :class="{ pulse: pulsing }"
     />
   </div>

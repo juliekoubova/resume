@@ -29,6 +29,7 @@ module.exports = {
     height: 0.5
   },
   plugins: [
-    require('./tailwind/vertical-rhythm')
+    require('./tailwind/vertical-rhythm'),
+    require('tailwindcss-padding-safe')()
   ]
 }
