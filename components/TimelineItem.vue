@@ -1,7 +1,7 @@
 <template>
   <section class="flex flex-col md:flex-row md:-ml-40 print:-ml-40 print:flex-row">
     <time-range
-      class="w-24 mt-4 flex-none vr-normal-xs text-gray-700 md:justify-end md:text-right"
+      class="w-24 mt-4 flex-none vr-tight-xs text-gray-700 md:justify-end md:text-right"
       :from="from"
       :to="to"
     />

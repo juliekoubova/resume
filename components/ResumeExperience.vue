@@ -8,7 +8,7 @@
       :last="index === experience.length - 1"
       :to="item.to"
     >
-      <h3 class="vr-loose-base text-gray-700 font-bold">{{ item.name }}</h3>
+      <h3 class="vr-relaxed-base md:mt-2 text-gray-700 font-bold">{{ item.name }}</h3>
       <div
         v-if="item.vendor"
         class="font-medium text-gray-600 vr-relaxed-sm tracking-wide"

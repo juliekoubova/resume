@@ -83,6 +83,9 @@ export default {
   router: {
     base: '/resume'
   },
+  server: {
+    host: '0.0.0.0'
+  },
   webfontloader: {
     google: {
       families: [
