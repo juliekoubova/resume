@@ -2,9 +2,10 @@
   <span>
     <a :href="href" class="interactive-link" target="_blank" rel="noopener">
       <fa :icon="['fab','github']" />
-      <span class="underline">
+      <span class="underline print:hidden">
         <slot>{{ project }}</slot>
       </span>
+      <span class="underline hidden print:inline">{{ href }}</span>
     </a>
   </span>
 </template>

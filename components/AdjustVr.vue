@@ -1,36 +1,23 @@
 <template>
   <component :is="tag">
+    <global-events target="window" @resize.passive="updateHeight()" />
     <slot />
   </component>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import passiveEvents from 'detect-passive-events'
+import GlobalEvents from 'vue-global-events'
 
 export default Vue.extend({
+  components: { GlobalEvents },
   props: {
     tag: { type: String, default: 'div' }
   },
-  data() {
-    return {
-      resizeHandler: undefined as undefined | (() => void)
-    }
-  },
   mounted() {
-    this.resizeHandler = this.updateHeight.bind(this)
-    const options = passiveEvents.hasSupport
-      ? { passive: true }
-      : false
-    addEventListener('resize', this.resizeHandler, options)
     this.updateHeight()
   },
 
-  destroyed() {
-    if (this.resizeHandler) {
-      removeEventListener('resize', this.resizeHandler)
-    }
-  },
   methods: {
     updateHeight() {
       if (!this.$el) {
@@ -44,9 +31,9 @@ export default Vue.extend({
 
       if (remainderPx !== 0) {
         const el = this.$el as HTMLElement
-        const paddingBottomPx = remPx - remainderPx
-        const paddingBottomRem = paddingBottomPx / remPx
-        el.style.paddingBottom = `${paddingBottomRem}rem`
+        const adjustPx = remPx - remainderPx
+        const adjustRem = adjustPx / remPx
+        el.style.marginBottom = `${adjustRem}rem`
       }
     }
   }
