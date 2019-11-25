@@ -9,11 +9,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { LinkPropertyHref } from 'vue-meta'
 import VerticalRhythmDebug from '@/components/VerticalRhythmDebug.vue'
 
-function preloadFont(name: string) {
+function preloadFont(name: string): LinkPropertyHref {
   return {
     as: 'font',
+    crossOrigin: 'anonymous',
     href: require(`../assets/fonts/${name}.woff2`),
     mime: 'font/woff2',
     rel: 'preload'
