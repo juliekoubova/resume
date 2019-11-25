@@ -7,22 +7,24 @@
         :format="{ month: 'long', year: 'numeric' }"
       />
     </div>
-    <div>
-      <span>Made with</span>
-      <a
-        class="interactive-link"
-        href="https://nuxtjs.org/"
-        target="_blank"
-        rel="noopener"
-      >nuxt.js</a>
-      <span>and</span>
-      <a
-        class="interactive-link"
-        href="https://tailwindcss.com/"
-        target="_blank"
-        rel="noopener"
-      >tailwind.css</a>.
-      <github-link project="juliekoubova/resume">See on GitHub</github-link>
+    <div class="flex flex-wrap justify-end">
+      <div class="mr-1">
+        <span>Made with</span>
+        <a
+          class="underline interactive-link"
+          href="https://nuxtjs.org/"
+          target="_blank"
+          rel="noopener"
+        >nuxt.js</a>
+        <span>and</span>
+        <a
+          class="underline interactive-link"
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noopener"
+        >tailwind.css</a>.
+      </div>
+      <github-link project="juliekoubova/resume">Show me how</github-link>
     </div>
   </footer>
 </template>

@@ -23,10 +23,6 @@
   @apply bg-pink-600;
 }
 
-/* .interactive-link {
-  @apply underline;
-} */
-
 .interactive-link:focus, .interactive-link:hover {
   @apply text-pink-800;
 }

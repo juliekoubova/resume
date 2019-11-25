@@ -11,7 +11,7 @@
       <h3 class="vr-relaxed-base md:mt-2 text-gray-700 font-bold">{{ item.name }}</h3>
       <div
         v-if="item.vendor"
-        class="font-medium text-gray-600 vr-relaxed-sm tracking-wide"
+        class="font-medium text-gray-700 vr-relaxed-sm tracking-wide"
       >{{ item.vendor }}</div>
       <div
         class="markdown-relaxed-sm break-words text-gray-800 mt-2"

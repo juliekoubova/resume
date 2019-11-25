@@ -7,7 +7,7 @@
           <h2 class="sr-only">Professional Experience</h2>
           <resume-experience :experience="experience" class="mt-4 md:mr-4" />
           <resume-footer
-            class="vr-loose-xs mt-16 pb-8 text-pink-400 tracking-wide print:fixed"
+            class="vr-normal-xs mt-16 pb-2 md:pb-8 text-pink-600 tracking-wide print:fixed"
           />
         </div>
         <div class="flex-shrink-0 w-1/4 pl-10 hidden md:block print:hidden">
