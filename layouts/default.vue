@@ -10,11 +10,30 @@
 <script lang="ts">
 import Vue from 'vue'
 import VerticalRhythmDebug from '@/components/VerticalRhythmDebug.vue'
+
+function preloadFont(name: string) {
+  return {
+    as: 'font',
+    href: require(`../assets/fonts/${name}.woff2`),
+    mime: 'font/woff2',
+    rel: 'preload'
+  }
+}
+
 export default Vue.extend({
   components: { VerticalRhythmDebug },
 
   data() {
     return { isDev: process.env.NODE_ENV === 'development' }
+  },
+
+  head() {
+    return {
+      link: [
+        preloadFont('quicksand-v19-latin-regular'),
+        preloadFont('quicksand-v19-latin-700')
+      ]
+    }
   }
 })
 </script>

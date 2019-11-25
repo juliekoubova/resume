@@ -28,8 +28,7 @@ export default {
     '@nuxtjs/tailwindcss'
   ],
   modules: [
-    'nuxt-fontawesome',
-    'nuxt-webfontloader'
+    'nuxt-fontawesome'
   ],
   build: {
     /** @param {import('webpack').Configuration} config */
@@ -85,12 +84,5 @@ export default {
   },
   server: {
     host: '0.0.0.0'
-  },
-  webfontloader: {
-    google: {
-      families: [
-        'Quicksand:400,500,700&display=swap&subset=latin'
-      ]
-    }
   }
 }
