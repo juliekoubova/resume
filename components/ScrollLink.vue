@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" @click.prevent="scroll">
+  <a :href="href" v-bind="$attrs" @click.prevent="scroll">
     <slot />
   </a>
 </template>
