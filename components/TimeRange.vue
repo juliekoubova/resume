@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <time-value v-if="from" :value="from" />
-    <span v-if="from">&mdash;</span>
+    <span v-if="from">&ndash;</span>
     <time-value v-if="to" :value="to" />
     <span v-else>present</span>
   </div>
