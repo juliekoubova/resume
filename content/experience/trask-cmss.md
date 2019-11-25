@@ -1,7 +1,7 @@
 ---
 from: 2012-12-01
 to: 2014-06-01
-name: ČMSS SharePoint 2007 to 2013 Migration
+name: SharePoint 2007 to 2013 Migration
 vendor: Trask Solutions a.s.
 tech:
   - SharePoint
