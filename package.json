@@ -1,7 +1,7 @@
 {
   "name": "@juliekoubova/resume",
   "version": "1.0.0",
-  "description": "I\u2019m a software developer based in Prague. My areas of expertise encompass a wide range of platforms and technologies: from creating beautiful and accessible web apps, to cloud back-end development, to low level C/C++ systems programming.",
+  "description": "I’m a software developer based in Prague. My areas of expertise encompass a wide range of platforms and technologies: from creating beautiful and accessible web apps, to cloud back-end development, to low level C/C++ systems programming.",
   "author": "Julie Koubová",
   "private": true,
   "scripts": {

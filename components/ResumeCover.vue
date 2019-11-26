@@ -1,6 +1,9 @@
 <template>
   <adjust-vr class="text-pink-100">
-    <div class="min-h-screen bg-pink-800 flex flex-col px-2-safe md:px-8-safe">
+    <div
+      ref="cover"
+      class="min-h-screen bg-pink-800 flex flex-col px-2-safe md:px-8-safe"
+    >
       <resume-cover-contacts />
       <div class="flex-auto flex flex-col justify-center">
         <h2 class="vr-normal-xl md:vr-loose-2xl text-pink-200">Hi!</h2>
@@ -9,7 +12,6 @@
         >I&rsquo;m Julie Koubová</h1>
 
         <p
-          ref="para"
           class="vr-relaxed-sm md:vr-loose-base mt-8 max-w-xl text-pink-200"
         >{{ description }}</p>
       </div>
@@ -17,7 +19,7 @@
       <div class="mx-auto h-32">
         <transition name="fade">
           <scroll-link
-            v-if="scrollY < 64"
+            v-if="showScrollEnticer"
             aria-label="Continue reading..."
             href="#experience"
             class="block bounce px-12 py-10"
@@ -32,7 +34,7 @@
 
     <transition name="slide-up">
       <header
-        v-show="scrollY >= showFixedHeaderAt"
+        v-show="showHeader"
         class="fixed top-0 left-0 right-0 flex justify-end bg-pink-800 px-4-safe pb-4 z-10 shadow-lg"
       >
         <div class="flex-auto">
@@ -41,12 +43,6 @@
         <resume-cover-contacts />
       </header>
     </transition>
-
-    <global-events
-      target="window"
-      @resize.passive="handleResize()"
-      @orientationchange.passive="handleResize()"
-    />
   </adjust-vr>
 </template>
 
@@ -76,7 +72,7 @@
 
 <script lang='ts'>
 import Vue from 'vue'
-import GlobalEvents from 'vue-global-events'
+
 import AdjustVr from '@/components/AdjustVr.vue'
 import ResumeCoverContacts from '@/components/ResumeCoverContacts.vue'
 import ScrollLink from '@/components/ScrollLink.vue'
@@ -84,7 +80,6 @@ import ScrollLink from '@/components/ScrollLink.vue'
 export default Vue.extend({
   components: {
     AdjustVr,
-    GlobalEvents,
     ResumeCoverContacts,
     ScrollLink
   },
@@ -93,40 +88,26 @@ export default Vue.extend({
   },
 
   data: () => ({
-    rafId: undefined as number | undefined,
-    scrollDelta: 0,
-    scrollY: 0,
-    showFixedHeaderAt: undefined as number | undefined
+    observer: undefined as IntersectionObserver | undefined,
+    showHeader: false,
+    showScrollEnticer: true
   }),
 
-  created() {
-    if (!this.$isServer) {
-      this.rafId = requestAnimationFrame(this.updateFrame)
+  mounted() {
+    if (this.$isServer) {
+      return
     }
-  },
 
-  beforeDestroy() {
-    if (this.rafId !== undefined) {
-      cancelAnimationFrame(this.rafId)
-    }
+    this.observer = new IntersectionObserver(this.handleIntersectChange, {
+      threshold: [0, 0.2, 0.8]
+    })
+    this.observer.observe(this.$refs.cover as Element)
   },
 
   methods: {
-    updateFrame() {
-      this.scrollDelta = window.scrollY - this.scrollY
-      this.scrollY = window.scrollY
-
-      if (this.showFixedHeaderAt === undefined) {
-        const para = this.$refs.para as Element
-        const rect = para.getBoundingClientRect()
-        this.showFixedHeaderAt = window.scrollY + rect.bottom
-      }
-
-      this.rafId = requestAnimationFrame(this.updateFrame)
-    },
-
-    handleResize() {
-      this.showFixedHeaderAt = undefined
+    handleIntersectChange([e]: IntersectionObserverEntry[]) {
+      this.showHeader = !e.isIntersecting || e.intersectionRatio < 0.2
+      this.showScrollEnticer = e.intersectionRatio >= 0.8
     }
   }
 })

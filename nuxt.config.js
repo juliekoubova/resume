@@ -22,14 +22,6 @@ export default {
   },
 
   loading: { color: '#fff' },
-  buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/tailwindcss'
-  ],
-  modules: [
-    'nuxt-fontawesome'
-  ],
   build: {
     /** @param {import('webpack').Configuration} config */
     extend(config) {
@@ -49,6 +41,11 @@ export default {
       })
     }
   },
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/tailwindcss'
+  ],
   fontawesome: {
     component: 'fa',
     imports: [
@@ -69,6 +66,9 @@ export default {
       }
     ]
   },
+  modules: [
+    'nuxt-fontawesome'
+  ],
   postcss: {
     'postcss-cssnext': {
       browsers: ['last 2 versions', 'ie >= 11']
