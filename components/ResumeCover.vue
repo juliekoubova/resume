@@ -11,12 +11,7 @@
         <p
           ref="para"
           class="vr-relaxed-sm md:vr-loose-base mt-8 max-w-xl text-pink-200"
-        >
-          I&rsquo;m a software developer based in Prague. My areas of expertise
-          encompass a wide range of platforms and technologies: from creating
-          beautiful and accessible web apps, to cloud back-end development,
-          to low level C/C++ systems programming.
-        </p>
+        >{{ description }}</p>
       </div>
 
       <div class="mx-auto h-32">
@@ -93,6 +88,10 @@ export default Vue.extend({
     ResumeCoverContacts,
     ScrollLink
   },
+  props: {
+    description: { type: String, default: '' }
+  },
+
   data: () => ({
     rafId: undefined as number | undefined,
     scrollDelta: 0,

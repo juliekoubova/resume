@@ -1,6 +1,6 @@
 <template>
   <div>
-    <resume-cover />
+    <resume-cover :description='description' />
     <div class="screen:max-w-5xl mx-auto px-2-safe md:px-6-safe">
       <div class="flex">
         <div class="md:ml-40 print:ml-40">
@@ -36,6 +36,7 @@ export default Vue.extend({
   },
   asyncData() {
     return {
+      description: process.env.npm_package_description,
       experience: loadExperience(),
       tech: loadTech()
     }
