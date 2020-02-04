@@ -1,6 +1,10 @@
 <template>
   <component :is="tag">
-    <global-events target="window" @resize.passive="updateHeight()" />
+    <global-events
+      target="window"
+      @resize.passive="updateHeight()"
+      @orientationchange.passive="updateHeight()"
+    />
     <slot />
   </component>
 </template>

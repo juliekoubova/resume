@@ -1,18 +1,16 @@
 <template>
   <div>
-    <resume-cover :description='description' />
-    <div class="screen:max-w-5xl mx-auto px-2-safe md:px-6-safe">
-      <div class="flex">
-        <div class="md:ml-40 print:ml-40">
-          <h2 class="sr-only">Professional Experience</h2>
-          <resume-experience :experience="experience" class="mt-4 md:mr-4" />
-          <resume-footer
-            class="vr-normal-xs mt-16 pb-2 md:pb-8 text-pink-600 tracking-wide print:fixed"
-          />
-        </div>
-        <div class="flex-shrink-0 w-1/4 pl-10 hidden md:block print:hidden">
-          <resume-tech :tech="tech" class="mt-4" />
-        </div>
+    <resume-cover :description="description" />
+    <h2 class="screen:sr-only vr-relaxed-lg font-medium md:px-8-safe">My Professional Experience</h2>
+    <div class="flex screen:max-w-5xl mx-auto screen:px-2-safe md:px-6-safe">
+      <div class="mr-1 sm:mr-6 sm:ml-40">
+        <resume-experience :experience="experience" class="mt-4" />
+        <resume-footer
+          class="vr-normal-xs mt-16 pb-2 md:pb-8 text-pink-600 tracking-wide print:absolute print:bottom-0"
+        />
+      </div>
+      <div class="flex-shrink-0 w-1/4 hidden md:block">
+        <resume-tech :tech="tech" class="mt-6 ml-4" />
       </div>
     </div>
   </div>

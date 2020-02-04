@@ -14,6 +14,18 @@ module.exports = {
         ]
       },
       screens: {
+        sm: {
+          raw: `screen and (min-width: ${defaultTheme.screens.sm})`
+        },
+        md: {
+          raw: `screen and (min-width: ${defaultTheme.screens.md})`
+        },
+        lg: {
+          raw: `screen and (min-width: ${defaultTheme.screens.lg})`
+        },
+        xl: {
+          raw: `screen and (min-width: ${defaultTheme.screens.xl})`
+        },
         print: { raw: 'print' },
         screen: { raw: 'screen' }
       }

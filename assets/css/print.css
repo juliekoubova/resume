@@ -1,0 +1,21 @@
+@media print {
+  @page {
+    size: A4;
+    padding: 0;
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    margin-left: .5in;
+    margin-right: .5in;
+    font-size: 14px;
+  }
+
+  section {
+    break-inside: avoid;
+  }
+}

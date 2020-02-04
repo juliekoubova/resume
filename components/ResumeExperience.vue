@@ -8,17 +8,22 @@
       :last="index === experience.length - 1"
       :to="item.to"
     >
-      <h3 class="vr-relaxed-base md:mt-2 text-gray-700 font-bold">{{ item.name }}</h3>
+      <h3
+        class="vr-relaxed-base sm:mt-2 text-gray-700 font-bold"
+      >
+        {{ item.name }}
+      </h3>
       <div
-        v-if="item.vendor"
         class="font-medium text-gray-700 vr-relaxed-sm tracking-wide"
-      >{{ item.vendor }}</div>
+      >
+        {{ item.vendor || 'Independent' }}
+      </div>
       <div
-        class="markdown-relaxed-sm break-words text-gray-800 mt-2"
+        class="markdown-relaxed-sm break-words hyphens-auto mt-2"
         v-html="item.html"
       />
-      <div v-if="item.github" class="vr-relaxed-sm text-pink-600">
-        <github-link :project="item.github" />
+      <div v-if="item.github" class="vr-relaxed-sm interactive-link">
+        <github-link :project="item.github">{{ item.github }}</github-link>
       </div>
     </timeline-item>
   </div>

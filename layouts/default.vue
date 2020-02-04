@@ -33,7 +33,8 @@ export default Vue.extend({
     return {
       link: [
         preloadFont('quicksand-v19-latin-regular'),
-        preloadFont('quicksand-v19-latin-700')
+        preloadFont('quicksand-v19-latin-700'),
+        preloadFont('quicksand-v19-latin-500')
       ]
     }
   }

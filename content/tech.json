@@ -1,6 +1,7 @@
 [
   {
     "name": "Web Platform",
+    "icon": "browser",
     "items": [
       "TypeScript",
       "Angular",
@@ -13,6 +14,7 @@
   },
   {
     "name": "Microsoft Azure",
+    "icon": ["fab", "microsoft"],
     "items": [
       "App Services",
       "Cosmos DB",

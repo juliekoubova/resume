@@ -1,13 +1,17 @@
 <template>
-  <span>
-    <a :href="href" class="interactive-link" target="_blank" rel="noopener">
-      <fa :icon="['fab','github']" />
-      <span class="underline print:hidden">
-        <slot>{{ project }}</slot>
-      </span>
-      <span class="underline hidden print:inline">{{ href }}</span>
-    </a>
-  </span>
+  <a
+    :href="href"
+    v-bind="$attrs"
+    class="interactive-link"
+    target="_blank"
+    rel="noopener"
+  >
+    <fa :icon="['fab','github']" />
+    <span class="underline print:hidden">
+      <slot />
+    </span>
+    <span class="underline hidden print:inline">{{ href }}</span>
+  </a>
 </template>
 
 <script lang="ts">

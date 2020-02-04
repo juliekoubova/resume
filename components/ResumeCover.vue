@@ -1,22 +1,26 @@
 <template>
-  <adjust-vr class="text-pink-100">
+  <adjust-vr class="screen:text-pink-100">
     <div
       ref="cover"
-      class="min-h-screen bg-pink-800 flex flex-col px-2-safe md:px-8-safe"
+      class="screen:min-h-screen screen:bg-pink-800 screen:flex flex-col screen:px-2-safe md:px-8-safe"
     >
       <resume-cover-contacts />
-      <div class="flex-auto flex flex-col justify-center">
-        <h2 class="vr-normal-xl md:vr-loose-2xl text-pink-200">Hi!</h2>
+      <div class="screen:flex flex-col flex-auto justify-center print:pt-12">
+        <h2 class="vr-normal-xl md:vr-loose-2xl screen:text-pink-200">Hi!</h2>
         <h1
           class="vr-normal-2xl md:vr-loose-3xl font-bold tracking-wide"
-        >I&rsquo;m Julie Koubová</h1>
+        >
+          I&rsquo;m Julie Koubová
+        </h1>
 
         <p
-          class="vr-relaxed-sm md:vr-loose-base mt-8 max-w-xl text-pink-200"
-        >{{ description }}</p>
+          class="vr-relaxed-sm md:vr-loose-base mt-8 pb-8 screen:max-w-2xl screen:text-pink-200"
+        >
+          {{ description }}
+        </p>
       </div>
 
-      <div class="mx-auto h-32">
+      <div class="print:hidden mx-auto h-32">
         <transition name="fade">
           <scroll-link
             v-if="showScrollEnticer"
@@ -35,10 +39,14 @@
     <transition name="slide-up">
       <header
         v-show="showHeader"
-        class="fixed top-0 left-0 right-0 flex justify-end bg-pink-800 px-4-safe pb-4 z-10 shadow-lg"
+        class="fixed print:hidden top-0 left-0 right-0 flex items-end bg-pink-800 px-4-safe pb-3 md:pb-4 z-10 shadow-lg"
       >
         <div class="flex-auto">
-          <h1 class="vr-normal-lg md:vr-normal-3xl tracking-wide">Julie Koubová</h1>
+          <h1
+            class="vr-normal-lg md:vr-normal-3xl font-medium tracking-wide"
+          >
+            Julie Koubová
+          </h1>
         </div>
         <resume-cover-contacts />
       </header>

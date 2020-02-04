@@ -1,12 +1,12 @@
 <template>
-  <section class="flex flex-col md:flex-row md:-ml-40 print:-ml-40 print:flex-row">
+  <section class="flex flex-col sm:flex-row sm:-ml-40">
     <time-range
-      class="w-24 mt-4 flex-none vr-tight-xs text-gray-700 md:justify-end md:text-right"
+      class="w-24 mt-4 flex-none vr-tight-xs font-medium text-gray-700 sm:justify-end"
       :from="from"
       :to="to"
     />
     <timeline-bullet-point
-      class="w-8 mx-4 flex-none hidden md:block print:block text-pink-500"
+      class="w-8 mx-4 flex-none hidden sm:block text-pink-500"
       :first="first"
       :last="last"
       :pulsing="!to"
