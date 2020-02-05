@@ -6,7 +6,7 @@
       <div class="mr-1 sm:mr-6 sm:ml-40">
         <resume-experience :experience="experience" class="mt-4" />
         <resume-footer
-          class="vr-normal-xs mt-16 pb-2 md:pb-8 text-pink-600 tracking-wide print:absolute print:bottom-0"
+          class="vr-normal-xs mt-16 pb-2 md:pb-8 text-pink-600"
         />
       </div>
       <div class="flex-shrink-0 w-1/4 hidden md:block">

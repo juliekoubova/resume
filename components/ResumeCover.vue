@@ -2,21 +2,29 @@
   <adjust-vr class="screen:text-pink-100">
     <div
       ref="cover"
-      class="screen:min-h-screen screen:bg-pink-800 screen:flex flex-col screen:px-2-safe md:px-8-safe"
+      class="screen:min-h-screen screen:bg-pink-800 screen:flex flex-col px-2-safe md:px-8-safe print:px-0"
     >
       <resume-cover-contacts />
       <div class="screen:flex flex-col flex-auto justify-center print:pt-12">
         <h2 class="vr-normal-xl md:vr-loose-2xl screen:text-pink-200">Hi!</h2>
         <h1
-          class="vr-normal-2xl md:vr-loose-3xl font-bold tracking-wide"
+          class="vr-normal-2xl md:vr-loose-3xl font-bold tracking-wide pb-8"
         >
           I&rsquo;m Julie Koubová
         </h1>
 
         <p
-          class="vr-relaxed-sm md:vr-loose-base mt-8 pb-8 screen:max-w-2xl screen:text-pink-200"
+          class="vr-relaxed-sm md:vr-loose-base screen:max-w-2xl screen:text-pink-200 pb-2"
         >
           {{ description }}
+        </p>
+
+        <p class="vr-relaxed-sm screen:hidden pb-8">
+          See the most recent version of my resume at
+          <a
+            class="underline interactive-link"
+            href="https://juliekoubova.github.io/resume"
+          >https://juliekoubova.github.io/resume</a>.
         </p>
       </div>
 

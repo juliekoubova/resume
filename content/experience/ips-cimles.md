@@ -2,6 +2,7 @@
 name: Interactive 3D Machining Visualization
 vendor: IPS s.r.o.
 from: 2018-10-01
+to: 2019-08-05
 tech:
   - WebGL
   - three.js
@@ -13,9 +14,10 @@ tech:
   - WebSockets
 ---
 
-Inherited a prototype of an app that would play a recording of a
-machining run; turned it into a modern, maintainable, server-rendered Angular
-application based on the [NGXS](https://github.com/ngxs/store/) state management library.
+Inherited a prototype of an app that would animate 3D models of tools and work
+pieces recorded during a machining run; turned it into a modern, maintainable,
+server-rendered Angular application based on the [NGXS](https://github.com/ngxs/store/)
+state management library.
 
 
 Later implemented playback of live data streamed over a web socket.

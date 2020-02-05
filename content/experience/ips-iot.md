@@ -3,14 +3,29 @@ name: Industrial Internet of Things
 vendor: IPS s.r.o.
 from: 2016-04-01
 tech:
-  - C#
-  - ASP.NET Core
   - Angular
+  - ASP.NET Core
+  - Azure Event Hubs
   - Azure Storage
   - Azure Web Apps
   - Azure Service Bus
+  - C#
   - Cosmos DB
+  - NGRX
   - Service Fabric
+  - SignalR
+  - Tachyons CSS
+  - TypeScript
+  - Webpack
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur luctus odio lorem, in porta elit finibus id. Phasellus tincidunt ipsum eu venenatis sagittis. Suspendisse in felis tincidunt, elementum elit ac, sollicitudin turpis. Donec sit amet turpis sapien. Donec nec odio turpis. Nunc faucibus, enim eget ornare lacinia, mi nisl porttitor nibh, ut tristique orci urna ac magna. Aliquam imperdiet, tortor a molestie vulputate, est lacus tincidunt lectus, eget iaculis eros leo sed magna. Maecenas cursus sem vitae viverra luctus.
+Lead a small group of developers in implementing an Azure-based
+industrial IOT project. Designed an ASP.NET Core framework for quick implementation
+of CRUD REST APIs against various backends (eg. MongoDB, Blob Storage, Table Storage).
+
+Implemented a fully configurable (SharePoint webpart-like) UI composed of widgets
+visualizing real-time data recieved via SignalR. Created a common UI component
+library implementing customer&rsquo;s visual identity using functional CSS approach.
+
+Lead the development of a JSON filtering and mapping engine inspired by MongoDB
+query language.

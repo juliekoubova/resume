@@ -1,20 +1,20 @@
 <template>
   <footer class="sm:flex sm:justify-between">
-    <span class="sm:hidden tracking-tight">
+    <span class="sm:hidden">
       Updated
       <time-value
         :value="updated"
         :format="{ month: 'short', year: 'numeric' }"
       />.
     </span>
-    <span class="hidden sm:inline tracking-tight">
+    <span class="hidden sm:inline">
       Updated
       <time-value
         :value="updated"
         :format="{ month: 'long', year: 'numeric' }"
       />.
     </span>
-    <span class="tracking-tight">
+    <span>
       <span>Made with</span>
       <a
         class="underline interactive-link"

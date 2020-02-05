@@ -4,7 +4,7 @@
       :class="{
         'border-current': !last,
         'border-current-to-transparent': last,
-        'mt-8': first
+        'mt-6': first
       }"
       class="border-l-4 -translate-x-1/2 absolute top-0 bottom-0 left-1/2 select-none"
     />
