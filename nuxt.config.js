@@ -50,6 +50,11 @@ export default {
     component: 'fa',
     imports: [
       {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: [
+          'faFilePdf'
+        ]
+      }, {
         set: '@fortawesome/free-solid-svg-icons',
         icons: [
           'faCircle',

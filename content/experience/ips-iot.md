@@ -19,13 +19,13 @@ tech:
   - Webpack
 ---
 
-Lead a small group of developers in implementing an Azure-based
-industrial IOT project. Designed an ASP.NET Core framework for quick implementation
-of CRUD REST APIs against various backends (eg. MongoDB, Blob Storage, Table Storage).
+Led a small group of developers implementing an Azure-based
+industrial IOT project. Architected both the .NET back-end and the Angular front-ends.
 
 Implemented a fully configurable (SharePoint webpart-like) UI composed of widgets
-visualizing real-time data recieved via SignalR. Created a common UI component
+visualizing real-time data received via SignalR. Created a common UI component
 library implementing customer&rsquo;s visual identity using functional CSS approach.
 
-Lead the development of a JSON filtering and mapping engine inspired by MongoDB
-query language.
+Oversaw the development of a generic JSON filtering and mapping engine inspired by MongoDB
+query language. Created infrastructure for real-time processing, aggregation,
+storage and forwarding of the acquired telemetry.
