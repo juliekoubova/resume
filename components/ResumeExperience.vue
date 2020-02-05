@@ -19,7 +19,7 @@
         {{ item.vendor || 'Independent' }}
       </div>
       <div
-        class="markdown-relaxed-sm break-words hyphens-auto text-justify mt-2"
+        class="markdown-relaxed-sm break-words hyphens-auto md:text-justify print:text-justify mt-2"
         v-html="item.html"
       />
       <div v-if="item.github" class="vr-relaxed-sm interactive-link">

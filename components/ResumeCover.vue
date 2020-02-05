@@ -20,11 +20,11 @@
             interface or API boundaries between components and teams, I strive
             to make them as intuitive and hard to break as possible.
           </p>
-          <p class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4">
+          <p class="vr-relaxed-sm md:vr-loose-base pb-4 md:pb-8">
             I love teaching and mentoring others and seeing them grow.
           </p>
 
-          <p class="vr-relaxed-sm screen:hidden pb-2">
+          <p class="vr-relaxed-sm screen:hidden">
             Get the most recent version of this resume at
             <a
               class="underline interactive-link"
@@ -32,7 +32,7 @@
             >https://juliekoubova.github.io/resume</a>.
           </p>
 
-          <p class="vr-relaxed-sm md:vr-loose-base print:hidden pb-2 md:pb-4">
+          <p class="vr-relaxed-sm md:vr-loose-base print:hidden">
             <a target="_blank" href="/resume/juliekoubova.pdf">
               <fa fixed-width :icon="['far','file-pdf']" />
               <span class="underline">Download a PDF version of this resume</span>
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="print:hidden mx-auto h-32">
+      <div class="print:hidden mx-auto h-32 mb-16">
         <transition name="fade">
           <scroll-link
             v-if="showScrollEnticer"
