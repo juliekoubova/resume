@@ -13,23 +13,28 @@
           I&rsquo;m Julie Koubová
         </h1>
 
-        <div class="screen:max-w-3xl screen:text-pink-200">
-          <p class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4">{{ description }}</p>
-          <p class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4">
-            I tend to focus on human interfaces a lot; be it the end-user
-            interface or API boundaries between components and teams, I strive
-            to make them as intuitive and hard to break as possible.
-          </p>
-          <p class="vr-relaxed-sm md:vr-loose-base pb-4 md:pb-8">
-            I love teaching and mentoring others and seeing them grow.
-          </p>
-
-          <p class="vr-relaxed-sm screen:hidden">
+        <div class="screen:max-w-3xl screen:text-pink-200 break-words print:text-justify">
+          <p class="vr-relaxed-sm screen:hidden pb-4">
             Get the most recent version of this resume at
             <a
               class="underline interactive-link"
               href="https://juliekoubova.github.io/resume"
             >https://juliekoubova.github.io/resume</a>.
+          </p>
+          <p
+            class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4"
+          >
+            {{ description }}
+          </p>
+          <p class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4">
+            I tend to focus on human interfaces a lot; be it the end-user
+            interface or API boundaries between components and teams, I strive
+            to make them as intuitive and hard to break as possible.
+          </p>
+          <p
+            class="vr-relaxed-sm md:vr-loose-base pb-4 md:pb-8"
+          >
+            I love teaching and mentoring others and seeing them grow.
           </p>
 
           <p class="vr-relaxed-sm md:vr-loose-base print:hidden">
