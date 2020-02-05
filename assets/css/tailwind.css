@@ -3,7 +3,6 @@
 @import 'tailwindcss/utilities';
 @import './fonts.css';
 @import './print.css';
-
 .-translate-x-1\/2 {
   transform: translateX(-50%);
 }
@@ -29,18 +28,15 @@
   @apply bg-pink-600;
 }
 
-.interactive-link {
+
+.markdown-relaxed-sm a {
   @apply font-medium;
   @apply text-pink-700;
   @apply transition-color;
-}
-
-.markdown-relaxed-sm a {
-  @apply interactive-link;
   @apply underline;
 }
 
-.interactive-link:focus, .interactive-link:hover, .markdown-relaxed-sm a:focus, .markdown-relaxed-sm a:hover {
+.markdown-relaxed-sm a:focus, .markdown-relaxed-sm a:hover {
   @apply text-pink-600;
 }
 

@@ -1,22 +1,19 @@
 <template>
-  <a
-    :href="href"
-    v-bind="$attrs"
-    class="interactive-link"
-    target="_blank"
-    rel="noopener"
-  >
+  <hyperlink :href="href" v-bind="$attrs">
     <fa :icon="['fab','github']" />
     <span class="underline print:hidden">
       <slot />
     </span>
     <span class="underline hidden print:inline">{{ href }}</span>
-  </a>
+  </hyperlink>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Hyperlink from '@/components/Hyperlink.vue'
+
 export default Vue.extend({
+  components: { Hyperlink },
   props: {
     project: { type: String, required: true }
   },

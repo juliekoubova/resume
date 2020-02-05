@@ -16,21 +16,17 @@
     </span>
     <span>
       <span>Made with</span>
-      <a
-        class="underline interactive-link"
+      <hyperlink
+        class="underline"
         href="https://nuxtjs.org/"
-        target="_blank"
-        rel="noopener"
-      >nuxt.js</a>
+      >nuxt.js</hyperlink>
       <span>and</span>
-      <a
-        class="underline interactive-link"
+      <hyperlink
+        class="underline"
         href="https://tailwindcss.com/"
-        target="_blank"
-        rel="noopener"
-      >tailwind.css</a>.
+      >tailwind.css</hyperlink>.
       <github-link
-        aria-label="This project's source on GitHub"
+        aria-label="This project&rsquo;s source on GitHub"
         project="juliekoubova/resume"
       />
     </span>
@@ -40,9 +36,10 @@
 <script lang="ts">
 import Vue from 'vue'
 import GithubLink from '@/components/GithubLink.vue'
+import Hyperlink from '@/components/Hyperlink.vue'
 import TimeValue from '@/components/TimeValue.vue'
 export default Vue.extend({
-  components: { TimeValue, GithubLink },
+  components: { Hyperlink, TimeValue, GithubLink },
   props: {
     updated: { type: Date, default: () => new Date() }
   }

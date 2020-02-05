@@ -9,12 +9,12 @@
       :to="item.to"
     >
       <h3
-        class="vr-relaxed-base sm:mt-2 text-gray-700 font-bold"
+        class="vr-relaxed-base sm:mt-2 text-gray-700 dark:text-gray-400 font-bold"
       >
         {{ item.name }}
       </h3>
       <div
-        class="font-medium text-gray-700 vr-relaxed-sm tracking-wide"
+        class="font-medium text-gray-700 dark:text-gray-400 vr-relaxed-sm tracking-wide"
       >
         {{ item.vendor || 'Independent' }}
       </div>
@@ -22,7 +22,7 @@
         class="markdown-relaxed-sm break-words hyphens-auto md:text-justify print:text-justify mt-2"
         v-html="item.html"
       />
-      <div v-if="item.github" class="vr-relaxed-sm interactive-link">
+      <div v-if="item.github" class="vr-relaxed-sm">
         <github-link :project="item.github">{{ item.github }}</github-link>
       </div>
     </timeline-item>

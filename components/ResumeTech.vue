@@ -2,7 +2,7 @@
   <div>
     <h2 class="sr-only">Technology</h2>
     <div v-for="section of tech" :key="section.name">
-      <h3 class="vr-relaxed-base font-bold text-gray-700">
+      <h3 class="vr-relaxed-base font-bold text-gray-700 dark:text-gray-400">
         {{ section.name }}
       </h3>
       <ul class="vr-relaxed-sm pb-4">

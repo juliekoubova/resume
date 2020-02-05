@@ -2,7 +2,7 @@
   <adjust-vr class="screen:text-pink-100">
     <div
       ref="cover"
-      class="screen:min-h-screen screen:bg-pink-800 screen:flex flex-col px-2-safe md:px-8-safe print:px-0"
+      class="screen:min-h-screen screen:bg-pink-800 dark:bg-pink-900 screen:flex flex-col px-2-safe md:px-8-safe print:px-0"
     >
       <resume-cover-contacts />
       <div class="screen:flex flex-col flex-auto justify-center print:pt-12">
@@ -13,13 +13,17 @@
           I&rsquo;m Julie Koubová
         </h1>
 
-        <div class="screen:max-w-3xl screen:text-pink-200 break-words print:text-justify">
+        <div
+          class="screen:max-w-3xl screen:text-pink-200 break-words print:text-justify"
+        >
           <p class="vr-relaxed-sm screen:hidden pb-4">
             Get the most recent version of this resume at
-            <a
-              class="underline interactive-link"
+            <hyperlink
+              class="underline"
               href="https://juliekoubova.github.io/resume"
-            >https://juliekoubova.github.io/resume</a>.
+            >
+              https://juliekoubova.github.io/resume
+            </hyperlink>.
           </p>
           <p
             class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4"
@@ -65,7 +69,7 @@
     <transition name="slide-up">
       <header
         v-show="showHeader"
-        class="fixed print:hidden top-0 left-0 right-0 flex items-end bg-pink-800 px-4-safe pb-3 md:pb-4 z-10 shadow-lg"
+        class="fixed print:hidden top-0 left-0 right-0 flex items-end bg-pink-800 dark:bg-pink-900 px-4-safe pb-3 md:pb-4 z-10 shadow-lg"
       >
         <div class="flex-auto">
           <h1
@@ -108,12 +112,14 @@
 import Vue from 'vue'
 
 import AdjustVr from '@/components/AdjustVr.vue'
+import Hyperlink from '@/components/Hyperlink.vue'
 import ResumeCoverContacts from '@/components/ResumeCoverContacts.vue'
 import ScrollLink from '@/components/ScrollLink.vue'
 
 export default Vue.extend({
   components: {
     AdjustVr,
+    Hyperlink,
     ResumeCoverContacts,
     ScrollLink
   },
