@@ -85,21 +85,24 @@
 </template>
 
 <style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s, transform 0.4s ease-out;
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s, transform 0.4s ease-out;
+  }
+  .slide-up-enter-active,
+  .slide-up-leave-active {
+    transition: transform 0.3s ease-in;
+  }
 }
+
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
 .fade-leave-to {
   transform: translateY(-3rem) scale(0.8);
-}
-
-.slide-up-enter-active,
-.slide-up-leave-active {
-  transition: transform 0.3s ease-in;
 }
 
 .slide-up-enter,
