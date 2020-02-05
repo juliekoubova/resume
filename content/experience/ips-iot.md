@@ -19,8 +19,8 @@ tech:
   - Webpack
 ---
 
-Led a small group of developers implementing an Azure-based
-industrial IOT project. Architected both the .NET back-end and the Angular front-ends.
+Led a small team of developers implementing an Azure-based industrial IOT project.
+Architected both the .NET back-end and the Angular front-ends.
 
 Implemented a fully configurable (SharePoint webpart-like) UI composed of widgets
 visualizing real-time data received via SignalR. Created a common UI component
