@@ -71,7 +71,13 @@ export default {
       }
     ]
   },
+
+  'google-gtag': {
+    id: 'UA-58690305-2'
+  },
+
   modules: [
+    '@nuxtjs/google-gtag',
     'nuxt-fontawesome'
   ],
   postcss: {
