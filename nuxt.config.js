@@ -14,10 +14,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+
+      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'msapplication-config', content: '/resume/browserconfig.xml' },
+      { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/resume/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/resume/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/resume/favicon-16x16.png' },
+      { rel: 'manifest', href: '/resume/site.webmanifest' },
+      { rel: 'mask-icon', href: '/resume/safari-pinned-tab.svg', color: '#97266d' },
+      { rel: 'shortcut icon', href: '/resume/favicon.ico' }
     ]
   },
 
