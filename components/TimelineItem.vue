@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import TimelineBulletPoint from './TimelineBulletPoint.vue'
+import TimelineBulletPoint from '@/components/TimelineBulletPoint.vue'
 import TimeRange from '@/components/TimeRange.vue'
 
 export interface TimelineItem {
