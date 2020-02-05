@@ -21,6 +21,7 @@ export default {
       { name: 'theme-color', content: '#ffffff' }
     ],
     link: [
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/resume/apple-touch-icon.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/resume/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/resume/favicon-16x16.png' },
