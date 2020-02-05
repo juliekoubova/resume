@@ -16,11 +16,10 @@ tech:
 
 Inherited a prototype of an app that would animate 3D models of tools and work
 pieces recorded during a machining run; turned it into a modern, maintainable,
-server-rendered Angular application based on the [NGXS](https://github.com/ngxs/store/)
-state management library.
+server-rendered Angular application based on the NGXS state management library.
 
 
 Later implemented playback of live data streamed over a web socket.
-Created a custom chart component using [D3.js](https://d3js.org/) that was
-performant enough to scroll smoothly at 60 FPS. Developed a WebGL shader rendering
-thousands of arrows representing forces exerted by the tool at each point of its path.
+Created a custom chart component using D3.js that was performant enough to
+scroll smoothly at 60 FPS. Developed a WebGL shader rendering thousands of arrows
+representing forces exerted by the tool at each point of its path.
