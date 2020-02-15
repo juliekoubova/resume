@@ -11,6 +11,7 @@ module.exports = {
     "quotes": ["warn", "single"],
     "semi": ["warn", "never"],
     "space-before-function-paren": ["warn", "never"],
-    "vue/singleline-html-element-content-newline": ["off"]
+    "vue/singleline-html-element-content-newline": ["off"],
+    "vue/multiline-html-element-content-newline": ["off"]
   }
 }
