@@ -22,10 +22,10 @@ tech:
 Led a small team of developers implementing an Azure-based industrial IOT project.
 Architected both the .NET back-end and the Angular front-ends.
 
-Implemented a fully configurable (SharePoint webpart-like) UI composed of widgets
+Implemented a fully configurable UI composed of widgets (similar to SharePoint webparts)
 visualizing real-time data received via SignalR. Created a common UI component
 library implementing customer&rsquo;s visual identity using functional CSS approach.
 
-Oversaw the development of a generic JSON filtering and mapping engine inspired by MongoDB
-query language. Created infrastructure for real-time processing, aggregation,
-storage and forwarding of the acquired telemetry.
+Oversaw the development of a generic JSON filtering and mapping engine inspired
+by the MongoDB query language. Created infrastructure for real-time processing,
+aggregation, storage and forwarding of the acquired telemetry.
