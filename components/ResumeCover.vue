@@ -21,9 +21,7 @@
             <hyperlink
               class="underline"
               href="https://juliekoubova.github.io/resume"
-            >
-              https://juliekoubova.github.io/resume
-            </hyperlink>.
+            >https://juliekoubova.github.io/resume</hyperlink>.
           </p>
           <p
             class="vr-relaxed-sm md:vr-loose-base pb-2 md:pb-4"
