@@ -31,6 +31,9 @@ export default Vue.extend({
 
   head() {
     return {
+      htmlAttrs: {
+        class: 'xl:text-xl 2xl:text-2xl'
+      },
       link: [
         preloadFont('quicksand-v19-latin-regular'),
         preloadFont('quicksand-v19-latin-700'),

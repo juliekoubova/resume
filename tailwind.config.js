@@ -2,7 +2,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   corePlugins: {
-    fontSize: false,
     lineHeight: false
   },
   theme: {
@@ -54,6 +53,9 @@ module.exports = {
         },
         xl: {
           raw: `screen and (min-width: ${defaultTheme.screens.xl})`
+        },
+        '2xl': {
+          raw: 'screen and (min-width: 1920px)'
         },
         print: { raw: 'print' },
         screen: { raw: 'screen' },
