@@ -42,5 +42,8 @@
     "push-dir": "^0.4.1",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1"
+  },
+  "resolutions": {
+    "minimist": "1.2.5"
   }
 }
