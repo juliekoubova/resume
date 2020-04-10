@@ -9528,6 +9528,11 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
+tailwind-vertical-rhythm@^1.0.0-pre:
+  version "1.0.0-pre"
+  resolved "https://registry.yarnpkg.com/tailwind-vertical-rhythm/-/tailwind-vertical-rhythm-1.0.0-pre.tgz#a9ae38aa6e024f6a042685b05f242aab3a0edbc8"
+  integrity sha512-EfzhvY2GNJC2aqFsoIv4f5QnjFvU/zH+yC4rBzeYS5a+BFusY4ZUfwBR3OGWMQM74PYB9E30q659UfaSpavlkw==
+
 tailwindcss-padding-safe@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tailwindcss-padding-safe/-/tailwindcss-padding-safe-1.0.4.tgz#b8ec15a478fa844f7c6d6e720da07056bcd3b606"

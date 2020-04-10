@@ -22,6 +22,7 @@
     "@types/webpack-env": "^1.15.1",
     "nuxt": "^2.11.0",
     "nuxt-fontawesome": "^0.4.0",
+    "tailwind-vertical-rhythm": "^1.0.0-pre",
     "tailwindcss-padding-safe": "^1.0.4",
     "vue-global-events": "^1.1.2"
   },
